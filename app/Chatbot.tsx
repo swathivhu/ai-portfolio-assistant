@@ -7,7 +7,7 @@ export default function Chatbot() {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const bottomRef = useRef(null);
+  const bottomRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -30,7 +30,7 @@ export default function Chatbot() {
     }, 800);
   };
 
-  const getBotResponse = (input) => {
+  const getBotResponse = (input: string) => {
     const msg = input.toLowerCase();
 
     if (msg.includes("skills") || msg.includes("tech")) {
