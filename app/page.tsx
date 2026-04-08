@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import Chatbot from "./Chatbot";
+import Chatbot from "./chatbot";
 
 export default function Home() {
   const roles = [

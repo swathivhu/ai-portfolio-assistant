@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 
 export default function Chatbot() {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState<{ role: string; text: string }[]>([]);
   const [input, setInput] = useState("");
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
